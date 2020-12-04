@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GAME</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+    <div class="game">
+      <header class="header">
+        <div class="title">
+          SOKOBAN
+          <button type="button" class="give-up" name="button">I give up</button>
+        </div>
+        <div class="stage">
+          STAGE 1
+        </div>
+        <div class="lives">
+
+        </div>
+        <div class="score">
+          Points: 0
+        </div>
+      </header>
+      <main class="container">
+        <div class="game-context">
+
+          <!-- GAME OVER -->
+          <div class="game-over">
+            <div class="over">
+              GAME OVER
+            </div>
+            <form class="game-over-form" method="post">
+              <input type="text" class="playerName" value="" required>
+              <input type="button" class="playerSubmit" value="Potrdi">
+            </form>
+            <button type="button" class="start-new" name="button">Start again</button>
+          </div>
+
+          <!-- ranking -->
+          <div class="ranking">
+            <table>
+              <thead>
+                <tr>
+                  <td>Mesto</td>
+                  <td>Tekmovalec</td>
+                  <td>Točke</td>
+                </tr>
+              </thead>
+              <tbody class="dataInsert">
+                  <!-- javascript -->
+              </tbody>
+            </table>
+            <button type="button" class="start-n" name="button">Start again</button>
+          </div>
+
+          <!-- LOADING -->
+          <div class="loading">
+            <img src="img/loading.svg" alt="" class="rotating">
+          </div>
+
+          <!-- SUCCESS NEW LEVEL -->
+          <div class="success-game">
+            <div class="success">
+              Bravo!
+            </div>
+            <button type="button" class="next-level" name="button">Next level!</button>
+          </div>
+
+          <!-- LIVE DOWN -->
+          <div class="live-down">
+
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="js/levels.js"></script>
+    <script type="module" src="js/paint.js"></script>
+    <script type="module" src="js/coordinate.js"></script>
+    <script type="module" src="js/events.js"></script>
+    <script type="module" src="js/gravity.js"></script>
+    <script type="module" src="js/serverSide.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

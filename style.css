@@ -1,0 +1,191 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  font-size: 28px;
+  width: 1000px;
+  background-color: yellow;
+  justify-content: space-between;
+}
+
+.game-context {
+  width: 1000px;
+  height: 550px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.wall {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  position: relative;
+}
+
+.wall2 {
+  width: 50px;
+  height: 50px;
+}
+
+[class^="cell"] {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+[class^="line"] {
+  position: absolute;
+  height: 50px;
+}
+
+
+.game-over {
+  position: absolute;
+  display: none;
+  top: calc(100% / 2 - 80px);
+  left: calc(100% / 2 - 120px);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+  padding: 10px 40px;
+  width: 200px;
+  height: 150px;
+  background-color: red;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.game-over-form {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.playerSubmit {
+  background-color: green;
+  padding: 5px 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+}
+
+
+.start-new {
+  background-color: orange;
+  padding: 5px 10px;
+  z-index: 1000;
+}
+
+
+.success-game {
+    position: absolute;
+    display: none;
+    top: calc(100% / 2 - 50px);
+    left: calc(100% / 2 - 20px);
+    text-align: center;
+    z-index: 1000;
+    padding: 30px 20px;
+    width: 100px;
+    background-color: green;
+}
+
+.ranking {
+    position: absolute;
+    display: none;
+    top: calc(100% / 2 - 115px);
+    left: calc(100% / 2 - 110px);
+    text-align: center;
+    z-index: 1000;
+    width: 200px;
+    height: 200px;
+    padding: 30px 20px;
+    background-color: green;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.ranking button {
+  padding: 5px 10px;
+  background-color: orange;
+}
+
+.next-level {
+  border-radius: 5px;
+  background-color: yellow;
+  padding: 10px 5px;
+}
+
+.give-up {
+  border-radius: 5px;
+  background-color: orangered;
+  padding: 5px 5px;
+  margin-bottom: -10px;
+}
+
+[class^="heart"] {
+  width: 25px;
+  height: 25px;
+}
+
+.loading {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: calc(100% / 2 - 35px);
+  left: calc(100% / 2 - 35px);
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.loading img {
+  width: 50px;
+  height: 50px;
+}
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
